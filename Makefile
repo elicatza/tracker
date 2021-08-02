@@ -13,6 +13,6 @@ PROGRAM=$(addprefix $(OUTDIR)/, $(PROGRAMNAME))
 all: $(PROGRAM)
 
 
-$(PROGRAM): $(SRCDIR)/main.o
+$(PROGRAM): $(SRCDIR)/main.c
 	$(CC) -o $@ $(SRCDIR)/main.c
 
