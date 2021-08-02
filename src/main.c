@@ -21,6 +21,8 @@ int main(int argc, char* argv[]) {
     char valid_flags[] = "htwf";
     char* flag_messages[] = {"high", "toilet", "workout", "fun"};
 
+    /* You can change place data is stored by modifying path */
+    char* home_to_name = "/var/tracker/";
 
     /* Check if user has inputed an equal amount of flags and messages */
     if (strlen(valid_flags) != (sizeof(flag_messages) / sizeof(flag_messages[0]))) {
@@ -106,7 +108,6 @@ int main(int argc, char* argv[]) {
         /* Sets file names. */
 
         char* home_path = getenv("HOME");
-        char* home_to_name = "/var/tracker/";
         size_t file_name_space;
 
         for (i = 0; i < active_flags_count; ++i) {
