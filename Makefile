@@ -5,7 +5,7 @@ CFLAGS=-std=c89 -Wall -Wshadow
 
 # Locations
 SRCDIR=src
-OUTDIR=bin
+OUTDIR=/usr/local/bin
 
 PROGRAM=$(addprefix $(OUTDIR)/, $(PROGRAMNAME))
 
@@ -13,14 +13,6 @@ PROGRAM=$(addprefix $(OUTDIR)/, $(PROGRAMNAME))
 all: $(PROGRAM)
 
 
-$(PROGRAM): $(OUTDIR)/main.o
-	$(CC) -o $@ $(OUTDIR)/main.o
-
- 
-$(OUTDIR)/main.o: $(SRCDIR)/main.c
-	$(CC) -c $(CFLAGS) -o $@ $(SRCDIR)/main.c
-
-
-clean:
-	rm -f $(OUTDIR)/*.o $(PROGRAM)
+$(PROGRAM): $(SRCDIR)/main.o
+	$(CC) -o $@ $(SRCDIR)/main.c
 
