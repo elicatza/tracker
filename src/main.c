@@ -18,8 +18,8 @@ int main(int argc, char* argv[]) {
     /* You need to add one letter to valid_flags, */
     /* and one string to flag_messages. */
     /* When changes are made. Re-compile with make. */
-    char valid_flags[] = "htwf";
-    char* flag_messages[] = {"high", "toilet", "workout", "fun"};
+    char valid_flags[] = "htws";
+    char* flag_messages[] = {"high", "toilet", "workout", "sleep"};
 
     /* You can change place data is stored by modifying path */
     char* home_to_name = "/var/tracker/";
