@@ -1,6 +1,8 @@
 ## Tracker
 A personal project to quckly document time and task to a file.
 
+<br> 
+
 ### Install: unix based
 To install you need:
 * git
@@ -19,8 +21,11 @@ The default name of binary is called tracker, which is located at /usr/local/bin
 The binary will get the system date, time and timezone on execution. 
 It will write this information to it's default location ~/var/tracker/tracker.  
 
-##### Flags
+<br>
+
+#### Flags
 When a flag is inclueded with the command like:
+
 ```
 tracker -s
 ```
@@ -33,5 +38,6 @@ The date along with the message will now be written to the file.
 
 If multiple flags are entered it will edit or make a file for each valid flag.  
 
+<br>
 
 ### Settings
