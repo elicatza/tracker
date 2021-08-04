@@ -102,7 +102,11 @@ int main(int argc, char* argv[]) {
 
 
     int longest_message_lenght = return_longest_array_in_matrix(active_messages, active_flags_count);
-    char* file_names[longest_message_lenght];
+    char** file_names;
+    if ((file_names = malloc(active_flags_count * sizeof(char *))) == NULL) {
+        perror("Unable to allocate memory");
+        exit(EXIT_FAILURE);
+    }
 
     {
         /* Sets file names. */
@@ -154,6 +158,7 @@ int main(int argc, char* argv[]) {
         free(file_names[i]);
     }
     free(fp);
+    free(file_names);
     free(message_cat);
 
     return EXIT_SUCCESS;
